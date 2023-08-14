@@ -1,0 +1,12 @@
+702dc4c88cecfe065faa216517b2530e *DESCRIPTION
+8c208ea4ebc3d14e177096bb1f8ef964 *LICENSE
+a15e27e49dc534840ea6f8d4cfb21b07 *NAMESPACE
+2b2fb40481e3f121e4e6c88ac2c8d14c *NEWS.md
+9d56014349301ecb336ff3f370e124f2 *R/checklists.R
+dec364bfe36a9525dd65f9cb4d2c5d4c *R/packagepal-package.R
+035bf142cb7d10673d2e90aa0f90f9bc *README.md
+dfdacdb70aaf62b0cf1548cc915412aa *man/checklist.Rd
+690d555414c71e21ba393dd05292bf9c *man/packagepal-package.Rd
+bf69179b8146c2c6b13c1bb3396f7854 *tests/testthat.R
+c5379a25b204e6f4a84ff2aeaa7ceafa *tests/testthat/_snaps/checklists.md
+6ee9e3209effa5569c57f697f1263d0e *tests/testthat/test-checklists.R
