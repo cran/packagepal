@@ -21,8 +21,10 @@ checklist <- function(type = "package") {
   if(type %in% c("CRAN", "cran")) {
     return(cran_checklist())
   }
-
-  return(ui_oops("Invalid check-list type: should be either 'package' or 'CRAN'."))
+  cli::cli_inform(c(
+    "x" = "Invalid check-list type: should be either 'package' or 'CRAN'."
+  ))
+  return(invisible())
 }
 
 
@@ -39,8 +41,8 @@ package_checklist <- function() {
     "Install {.href [XCode](https://developer.apple.com/xcode/resources/)} (on MacOS) or {.href [Rtools](https://cran.r-project.org/bin/windows/Rtools/)} (on Windows)",
     "Install {.href [Git](https://git-scm.com/downloads)}",
     "Install the {.pkg devtools} package",
-    "Check if your package name is available with {.code available::available('your_package_name')}",
-    "Create your package with {.code usethis::create_create('path/package_name')} (but be deliberate about {.emph where} you create it!)",
+    "Check if your package name is available with {.code pak::pkg_name_check('your_package_name')}",
+    "Create your package with {.code usethis::create_package('path/package_name')} (but be deliberate about {.emph where} you create it!)",
     "Make your package a Git repository using {.code usethis::use_git()}",
     "Put the package on GitHub as a remote repository using {.code usethis::use_github()}",
     "Create your first R script via {.code usethis::use_r('my_function')}",
@@ -56,7 +58,7 @@ package_checklist <- function() {
     "Include a Citation File with {.code cffr::cff_write()}",
     "Add a README file with {.code usethis::use_readme_rmd()}",
     "Edit the README, and render the .Rmd file with {.code devtools::build_readme()}",
-    "Add the R CMD check GitHub action with {.code usethis::use_github_action_check_standard()}",
+    "Add the R CMD check GitHub action with {.code usethis::use_github_action('check-standard')}",
     "Add a vignette, such as {.code usethis::use_vignette('package_pal')}. Edit the .Rmd file, then preview using {.code devtools::build_rmd('vignettes/package_pal.Rmd')}",
     "Configure your package for {.pkg pkgdown} with {.code usethis::use_pkgdown() }",
     "Build the website locally with {.code pkgdown::build_site()}",
